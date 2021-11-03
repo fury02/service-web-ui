@@ -18,10 +18,13 @@ export const idlFactory = ({ IDL }) => {
   });
   const DIFI_SERVICE = IDL.Service({
     'canister_status' : IDL.Func([IDL.Text], [canister_status_type], []),
+    'clear_column' : IDL.Func([IDL.Text, IDL.Text], [IDL.Bool], []),
+    'clear_table' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'credit' : IDL.Func([], [], []),
     'cycles_available' : IDL.Func([], [IDL.Nat], []),
     'cycles_balance' : IDL.Func([], [IDL.Nat], []),
     'cycles_savings' : IDL.Func([], [IDL.Nat], []),
+    'delete_column' : IDL.Func([IDL.Text, IDL.Text], [IDL.Bool], []),
     'delete_table' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'delete_table_cell_value' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Text],
@@ -30,6 +33,7 @@ export const idlFactory = ({ IDL }) => {
       ),
     'delete_table_entity' : IDL.Func([IDL.Text, IDL.Text], [IDL.Bool], []),
     'deposit' : IDL.Func([], [], []),
+    'exist_table' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'find_table_cell' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Text],
         [IDL.Text],

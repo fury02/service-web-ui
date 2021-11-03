@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.blackText{ color: black; }
+.wheatText{ color: wheat; }
+.yellowText{ color: yellow; }
+.whiteText{ color: white; }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +40,6 @@
   to {
     transform: rotate(360deg);
   }
+
+
 }

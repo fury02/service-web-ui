@@ -1,10 +1,13 @@
 import type { Principal } from '@dfinity/principal';
 export interface DIFI_SERVICE {
   'canister_status' : (arg_0: string) => Promise<canister_status_type>,
+  'clear_column' : (arg_0: string, arg_1: string) => Promise<boolean>,
+  'clear_table' : (arg_0: string) => Promise<boolean>,
   'credit' : () => Promise<undefined>,
   'cycles_available' : () => Promise<bigint>,
   'cycles_balance' : () => Promise<bigint>,
   'cycles_savings' : () => Promise<bigint>,
+  'delete_column' : (arg_0: string, arg_1: string) => Promise<boolean>,
   'delete_table' : (arg_0: string) => Promise<boolean>,
   'delete_table_cell_value' : (
       arg_0: string,
@@ -13,6 +16,7 @@ export interface DIFI_SERVICE {
     ) => Promise<boolean>,
   'delete_table_entity' : (arg_0: string, arg_1: string) => Promise<boolean>,
   'deposit' : () => Promise<undefined>,
+  'exist_table' : (arg_0: string) => Promise<boolean>,
   'find_table_cell' : (arg_0: string, arg_1: string, arg_2: string) => Promise<
       string
     >,
